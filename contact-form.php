@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: Clean and Simple Contact Form
-Plugin URI: http://megnicholas.co.uk/plugins/contact-form
+Plugin URI: http://megnicholas.co.uk/plugins/clean-and-simple-contact-form
 Description: A simple and clean contact form with Google reCaptcha. <strong>Clean</strong>: all user inputs are stripped in order to avoid cross-site scripting (XSS) vulnerabilities. <strong>Simple</strong>: Ajax enabled validation for immediate response and guidance for your users (can be switched off). <strong>Stylish</strong>: Use the included stylesheet or switch it off and use your own for seamless integration with your website. Uses <strong>Bootstrap</strong> classes. 
 Version: 4.04
 Author: Meghan Nicholas
-Author URI: http://megnicholas.co.uk/plugins/clean-and-simple-contact-form
+Author URI: http://megnicholas.co.uk
 License: GPLv2 or later
 bootstrap,
 */
