@@ -24,20 +24,17 @@ class cff_PluginSettings {
 
     static function SentMessageHeading() {
         $options = get_option('cff_options');
-        $message=trim($options['sent_message_heading']);
-        return strlen($message) == 0 ? "Message Sent" : $message;
+        return isset($options['sent_message_heading']) ? $options['sent_message_heading'] : "Message Sent";
     }	
 
     static function SentMessageBody() {
         $options = get_option('cff_options');
-        $message=trim($options['sent_message_body']);
-        return strlen($message) == 0 ? "Thank you for your message, we will be in touch very shortly." : $message;
+        return isset($options['sent_message_body'])  ? $options['sent_message_body'] : "Thank you for your message, we will be in touch very shortly.";
     }	
 
     static function Message() {
         $options = get_option('cff_options');
-        $message=trim($options['message']);
-        return strlen($message) == 0 ? "Please enter your contact details and a short message below and I will try to answer your query as soon as possible." : $message;
+        return isset($options['message']) ? $options['message'] : "Please enter your contact details and a short message below and I will try to answer your query as soon as possible.";
     }	
     
     static function LoadStyleSheet() {
