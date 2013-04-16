@@ -46,8 +46,10 @@ function cff_ContactForm()
          
         <?php } ?>
 
-           <p><?php echo cff_PluginSettings::Message(); ?></p>
-<!--           <hr/>-->
+           <?php if ( strlen(cff_PluginSettings::Message()) > 0 ) { ?>
+                <p><?php echo cff_PluginSettings::Message(); ?></p>
+           <?php } ?>
+                
             <form id="contact-form" name="frmContact" method="post">
 
             <?php wp_nonce_field('cff_contact','cff_nonce'); ?>
