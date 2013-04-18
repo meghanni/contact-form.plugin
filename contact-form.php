@@ -33,6 +33,8 @@ include('class.cff_pluginsettings.php');
 include('class.cff_settings.php');
 include('class.cff_contact.php');
 
+include('mvc/class.view.php');
+
 if ( cff_PluginSettings::UseRecaptcha() )
     include('recaptcha-php-1.11/recaptchalib.php');
 
