@@ -38,7 +38,7 @@ Minimal setup. Simply activate the plugin and place the shortcode [contact-form]
 
 Hopefully this plugin will fulfil all your needs, if not get in-touch and I will customise to your exact requirements.
 
-== Installation Instructions ==
+== Installation ==
 There are two ways to install:
 
 1. Click the ‘Install Now’ link from the plugin library listing to automatically download and install.
@@ -84,3 +84,5 @@ Here is a list of things that you can change
 == Demo ==
 This is a demonstration of this plugin working on the default Twenty Twelve theme.
 [Clean and Simple Contact Form Demonstration] (http://demo.megnicholas.co.uk/wordpress-clean-and-simple-contact-form “Plugin Demonstration”)
+
+== Frequently Asked Questions ==
