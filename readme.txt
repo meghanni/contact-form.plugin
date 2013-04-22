@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Tags: simple, contact, form, bootstrap, twitter, google, reCAPTCHA, ajax, secure
 Requires at least: 3.3
 Tested up to: 3.5
-Stable tag: 4.04
+Stable tag: 4.0.4
 
 A simple and clean contact form with Google reCaptcha. 
 Clean: all user inputs are stripped in order to avoid cross-site scripting (XSS) vulnerabilities. 
