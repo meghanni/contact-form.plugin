@@ -1,6 +1,10 @@
+/*! jQuery Contact-Form Validation - v1.0.0 - 22/04/2013
+* Author Meghan Nicholas
+* Licence GPL2 */
+
 jQuery(document).ready(function($) {
 
-	$('#contact-form').validate({ 
+	$('#frmContact').validate({ 
 	
 		errorElement: 'span',
 		errorClass: 'help-inline',

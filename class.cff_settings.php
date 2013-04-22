@@ -1,7 +1,9 @@
 <?php
+
 /*
  * creates the settings page for the plugin
- */
+*/
+
 class cff_settings
 {
     public 
@@ -54,8 +56,7 @@ class cff_settings
     public 
     function page_init() 
     {
-
-        add_settings_section('section_recaptcha', '<h3>Recaptcha Settings</h3>', array(
+        add_settings_section('section_recaptcha', '<h3>ReCAPTCHA Settings</h3>', array(
             $this,
             'print_section_info_recaptcha'
         ) , 'contact-form-settings');
@@ -63,104 +64,98 @@ class cff_settings
             $this,
             'check_form'
         ));
-        
-        add_settings_field('use_recaptcha', 'Use reCaptcha : ', array(
+        add_settings_field('use_recaptcha', 'Use reCAPTCHA : ', array(
             $this,
             'create_fields'
-        ) , 'contact-form-settings', 'section_recaptcha',array('use_recaptcha'));
-        
+        ) , 'contact-form-settings', 'section_recaptcha', array(
+            'use_recaptcha'
+        ));
         add_settings_field('theme', 'reCAPTCHA Theme : ', array(
             $this,
             'create_fields'
-        ) , 'contact-form-settings', 'section_recaptcha',array('theme'));
-        
+        ) , 'contact-form-settings', 'section_recaptcha', array(
+            'theme'
+        ));
         add_settings_field('recaptcha_public_key', 'reCAPTCHA Public Key : ', array(
             $this,
             'create_fields'
-        ) , 'contact-form-settings', 'section_recaptcha',array('recaptcha_public_key'));
-        
+        ) , 'contact-form-settings', 'section_recaptcha', array(
+            'recaptcha_public_key'
+        ));
         add_settings_field('recaptcha_private_key', 'reCAPTCHA Private Key : ', array(
             $this,
             'create_fields'
-        ) , 'contact-form-settings', 'section_recaptcha',array('recaptcha_private_key'));
-        
+        ) , 'contact-form-settings', 'section_recaptcha', array(
+            'recaptcha_private_key'
+        ));
         add_settings_section('section_message', '<h3>Message Settings</h3>', array(
             $this,
             'print_section_info_message'
         ) , 'contact-form-settings');
-        
         add_settings_field('message', 'Message : ', array(
             $this,
             'create_fields'
-        ) , 'contact-form-settings', 'section_message',array('message'));
-
+        ) , 'contact-form-settings', 'section_message', array(
+            'message'
+        ));
         add_settings_field('sent_message_heading', 'Message Sent Heading : ', array(
             $this,
             'create_fields'
-        ) , 'contact-form-settings', 'section_message',array('sent_message_heading'));
-
+        ) , 'contact-form-settings', 'section_message', array(
+            'sent_message_heading'
+        ));
         add_settings_field('sent_message_body', 'Message Sent Content : ', array(
             $this,
             'create_fields'
-        ) , 'contact-form-settings', 'section_message',array('sent_message_body'));
-        
+        ) , 'contact-form-settings', 'section_message', array(
+            'sent_message_body'
+        ));
         add_settings_section('section_styling', '<h3>Styling and Validation</h3>', array(
             $this,
             'print_section_info_styling'
-        ) , 'contact-form-settings');    
-        
+        ) , 'contact-form-settings');
         add_settings_field('load_stylesheet', 'Use this plugin\'s default stylesheet (un-tick to use your theme\'s style sheet instead): ', array(
             $this,
             'create_fields'
-        ) , 'contact-form-settings', 'section_styling',array('load_stylesheet'));    
-        
+        ) , 'contact-form-settings', 'section_styling', array(
+            'load_stylesheet'
+        ));
         add_settings_field('use_client_validation', 'Use client side validation (Ajax): ', array(
             $this,
             'create_fields'
-        ) , 'contact-form-settings', 'section_styling',array('use_client_validation'));           
-        
-        
-        
+        ) , 'contact-form-settings', 'section_styling', array(
+            'use_client_validation'
+        ));
     }
-
     public 
     function check_form($input) 
     {
         $options = get_option(CFF_OPTIONS_KEY);
         
-        if ( isset($input['use_recaptcha']) ) {
+        if (isset($input['use_recaptcha'])) 
+        {
             $options['use_recaptcha'] = true;
         }
-        else {
+        else
+        {
             unset($options['use_recaptcha']);
         }
-
-        if ( isset($input['theme']) )
-            $options['theme'] = filter_var($input['theme'], FILTER_SANITIZE_STRING);
         
-        if ( isset($input['recaptcha_public_key']) )
-            $options['recaptcha_public_key'] = filter_var($input['recaptcha_public_key'], FILTER_SANITIZE_STRING);
+        if (isset($input['theme'])) $options['theme'] = filter_var($input['theme'], FILTER_SANITIZE_STRING);
         
-        if ( isset($input['recaptcha_private_key']) )
-            $options['recaptcha_private_key'] = filter_var($input['recaptcha_private_key'], FILTER_SANITIZE_STRING);
-
+        if (isset($input['recaptcha_public_key'])) $options['recaptcha_public_key'] = filter_var($input['recaptcha_public_key'], FILTER_SANITIZE_STRING);
+        
+        if (isset($input['recaptcha_private_key'])) $options['recaptcha_private_key'] = filter_var($input['recaptcha_private_key'], FILTER_SANITIZE_STRING);
         $options['sent_message_heading'] = filter_var($input['sent_message_heading'], FILTER_SANITIZE_STRING);
-        
         $options['sent_message_body'] = filter_var($input['sent_message_body'], FILTER_SANITIZE_STRING);
-
         $options['message'] = filter_var($input['message'], FILTER_SANITIZE_STRING);
         
-        if ( isset($input['load_stylesheet']) ) 
-            $options['load_stylesheet'] = true;
-        else
-            $options['load_stylesheet'] = false;
+        if (isset($input['load_stylesheet'])) $options['load_stylesheet'] = true;
+        else $options['load_stylesheet'] = false;
         
-        if ( isset($input['use_client_validation']) ) 
-            $options['use_client_validation'] = true;
-        else
-            $options['use_client_validation'] = false;        
-
-        update_option(CFF_OPTIONS_KEY,$options);
+        if (isset($input['use_client_validation'])) $options['use_client_validation'] = true;
+        else $options['use_client_validation'] = false;
+        update_option(CFF_OPTIONS_KEY, $options);
         
         return $input;
     }
@@ -170,69 +165,69 @@ class cff_settings
         print 'Enter your reCAPTCHA settings below:';
         print "<p>To use reCAPTCHA you must get an API key from <a target='_blank' href='https://www.google.com/recaptcha/admin/create'>https://www.google.com/recaptcha/admin/create</a></p>";
     }
-    
     public 
     function print_section_info_message() 
     {
         print 'Enter your message settings below:';
-    } 
-    
+    }
     public 
     function print_section_info_styling() 
     {
+
         //print 'Enter your styling settings below:';
-    }  
-    
-    public function create_fields($args) {
-        $fieldname=$args[0];
         
-        switch ($fieldname) {
-            case 'use_recaptcha':
-                $checked = cff_PluginSettings::UseRecaptcha() == true ? "checked" : "";
-                ?><input type="checkbox" <?php echo $checked; ?>  id="use_recaptcha" name="array_key[use_recaptcha]"><?php
-                break;
-            case 'load_stylesheet':
-                $checked = cff_PluginSettings::LoadStyleSheet() == true ? "checked" : "";
-                ?><input type="checkbox" <?php echo $checked; ?>  id="load_stylesheet" name="array_key[load_stylesheet]"><?php                
-                break;
-            case 'recaptcha_public_key':
-                $disabled = cff_PluginSettings::UseRecaptcha() == false ? "disabled" : "";
-                ?><input <?php echo $disabled; ?> type="text" size="60" id="recaptcha_public_key" name="array_key[recaptcha_public_key]" value="<?=cff_PluginSettings::PublicKey(); ?>" /><?php                
-                break;
-            case 'recaptcha_private_key':
-                $disabled = cff_PluginSettings::UseRecaptcha() == false ? "disabled" : "";
-                ?><input <?php echo $disabled; ?> type="text" size="60" id="recaptcha_private_key" name="array_key[recaptcha_private_key]" value="<?=cff_PluginSettings::PrivateKey(); ?>" /><?php
-                break;
-            case 'sent_message_heading':
-                ?><input type="text" size="60" id="sent_message_heading" name="array_key[sent_message_heading]" value="<?=cff_PluginSettings::SentMessageHeading(); ?>" /><?php
-                break;
-            case 'sent_message_body':
-                ?><textarea cols="63" rows="8" name="array_key[sent_message_body]"><?=cff_PluginSettings::SentMessageBody(); ?></textarea><?php                
-                break;
-            case 'message':
-                ?><textarea cols="63" rows="8" name="array_key[message]"><?=cff_PluginSettings::Message(); ?></textarea><?php                
-                break;
-            case 'theme':
-                $theme = cff_PluginSettings::Theme();
-                $disabled = cff_PluginSettings::UseRecaptcha() == false ? "disabled" : "";
-                ?>
+    }
+    public 
+    function create_fields($args) 
+    {
+        $fieldname = $args[0];
+        
+        switch ($fieldname) 
+        {
+        case 'use_recaptcha':
+            $checked = cff_PluginSettings::UseRecaptcha() == true ? "checked" : "";
+?><input type="checkbox" <?php echo $checked; ?>  id="use_recaptcha" name="array_key[use_recaptcha]"><?php
+        break;
+        case 'load_stylesheet':
+            $checked = cff_PluginSettings::LoadStyleSheet() == true ? "checked" : "";
+?><input type="checkbox" <?php echo $checked; ?>  id="load_stylesheet" name="array_key[load_stylesheet]"><?php
+        break;
+        case 'recaptcha_public_key':
+            $disabled = cff_PluginSettings::UseRecaptcha() == false ? "disabled" : "";
+?><input <?php echo $disabled; ?> type="text" size="60" id="recaptcha_public_key" name="array_key[recaptcha_public_key]" value="<?=cff_PluginSettings::PublicKey(); ?>" /><?php
+        break;
+        case 'recaptcha_private_key':
+            $disabled = cff_PluginSettings::UseRecaptcha() == false ? "disabled" : "";
+?><input <?php echo $disabled; ?> type="text" size="60" id="recaptcha_private_key" name="array_key[recaptcha_private_key]" value="<?=cff_PluginSettings::PrivateKey(); ?>" /><?php
+        break;
+        case 'sent_message_heading':
+?><input type="text" size="60" id="sent_message_heading" name="array_key[sent_message_heading]" value="<?=cff_PluginSettings::SentMessageHeading(); ?>" /><?php
+        break;
+        case 'sent_message_body':
+?><textarea cols="63" rows="8" name="array_key[sent_message_body]"><?=cff_PluginSettings::SentMessageBody(); ?></textarea><?php
+        break;
+        case 'message':
+?><textarea cols="63" rows="8" name="array_key[message]"><?=cff_PluginSettings::Message(); ?></textarea><?php
+        break;
+        case 'theme':
+            $theme = cff_PluginSettings::Theme();
+            $disabled = cff_PluginSettings::UseRecaptcha() == false ? "disabled" : "";
+?>
                 <select <?php echo $disabled; ?> id="array_key[theme]" name="array_key[theme]">
-                    <option <?php echo $theme == "red" ? "selected" : "" ; ?> value="red">Red</option>
+                    <option <?php echo $theme == "red" ? "selected" : ""; ?> value="red">Red</option>
                     <option <?php echo $theme == "white" ? "selected" : ""; ?>  value="white">White</option>
                     <option <?php echo $theme == "blackglass" ? "selected" : ""; ?> value="blackglass">Blackglass</option>
                     <option <?php echo $theme == "clean" ? "selected" : ""; ?> value="clean">Clean</option>
                 </select>        
-                <?php                
-                break;
-            case 'use_client_validation':
-                $checked = cff_PluginSettings::UseClientValidation() == true ? "checked" : "";
-                ?><input type="checkbox" <?php echo $checked; ?>  id="use_client_validation" name="array_key[use_client_validation]"><?php                
-                break;
-
-            default:
-                break;
+                <?php
+        break;
+        case 'use_client_validation':
+            $checked = cff_PluginSettings::UseClientValidation() == true ? "checked" : "";
+?><input type="checkbox" <?php echo $checked; ?>  id="use_client_validation" name="array_key[use_client_validation]"><?php
+        break;
+        default:
+        break;
         }
     }
-    
-    
 }
+
