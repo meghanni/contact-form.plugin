@@ -4,7 +4,7 @@
 
 <?php wp_nonce_field('cff_contact','cff_nonce'); ?>
 
-<!-- Clean and Simple Contact Form. Version <?php echo $version; ?> -->
+<!-- Clean and Simple Contact Form by megnicholas. Version <?php echo $version; ?> -->
 
   <!--email address -->
   <div class="control-group<?php 
