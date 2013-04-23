@@ -12,14 +12,13 @@ function cff_ContactForm()
         
         if (wp_mail(get_bloginfo('admin_email') , get_bloginfo('name') . ' -  Web Enquiry', $contact->Message, $headers)) 
         {
-            $view = new View('message-sent'); 
+            $view = new CFF_View('message-sent'); 
             $view->Set('heading',cff_PluginSettings::SentMessageHeading());
             $view->Set('message',cff_PluginSettings::SentMessageBody());
         }
         else
         {
-            $view = new View('message-not-sent');
-            echo "</p>Message Not Sent</p>";
+            $view = new CFF_View('message-not-sent');
         }
         
         return $view->Render();
@@ -38,9 +37,9 @@ function cff_ContactForm()
 
     //set-up the view
     if ( $contact->RecaptchaPublicKey<>'' && $contact->RecaptchaPrivateKey<>'') 
-        $view = new View('contact-form-with-recaptcha'); 
+        $view = new CFF_View('contact-form-with-recaptcha'); 
     else
-        $view = new View('contact-form'); 
+        $view = new CFF_View('contact-form'); 
 
     $view->Set('contact',$contact);
     $view->Set('message',cff_PluginSettings::Message());

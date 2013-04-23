@@ -1,1 +1,1 @@
-<p>Message Not Sent</p>
+<p>Sorry, there has been a problem and your message was not sent.</p>

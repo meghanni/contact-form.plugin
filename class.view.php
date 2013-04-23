@@ -1,6 +1,6 @@
 <?php
 
-class View
+class CFF_View
 {
     /**
      * Path of the view to render
