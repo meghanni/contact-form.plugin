@@ -108,8 +108,9 @@ A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap mark
 
 == Changelog ==
 Version 4.07
-Fixed a bug: Plugin name is actually clean-and-simple-contact-form-by-meg-nicholas now (not contact-form) but this new name needed to be updated in the plugin settings definitions. I also needed to rename contact-form.php to clean-and-simple-contact-form-by-meg-nicholas.php. My thanks to Jakub for finding this bug.
+1: Fixed a bug: Plugin name is actually clean-and-simple-contact-form-by-meg-nicholas now (not contact-form) but this new name needed to be updated in the plugin settings definitions. I also needed to rename contact-form.php to clean-and-simple-contact-form-by-meg-nicholas.php. My thanks to Jakub for finding this bug.
+2: If your webpage is ssl then recaptcha will now also use ssl mode.
 
 
 == Upgrade Notice ==
-A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap markup.
+Fixed a bug which occurred when plugin name was changed. Recaptcha will now use ssl if your webpage is ssl.
