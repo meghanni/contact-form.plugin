@@ -3,10 +3,10 @@ Contributors: MegNicholas
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AKQM4KSBQ4H66
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl.html
-Tags: simple, contact, form, bootstrap, twitter, google, reCAPTCHA, ajax, secure
+Tags: simple, contact, form, contact button, contact form, contact form plugin, contacts, contacts form plugin, contact me, feedback form, bootstrap, twitter, google, reCAPTCHA, ajax, secure
 Requires at least: 3.3
 Tested up to: 3.5
-Stable tag: 4.0.6
+Stable tag: 4.0.9
 
 A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap markup.
 
@@ -50,7 +50,8 @@ Here’s why:
 
 *   Written by an **experienced PHP programmer** and rigorously  tested as standard practice.
 
-Hopefully this plugin will fulfil all your needs, if not get in-touch http://megnicholas.co.uk/contact-me and I will customise to your exact requirements.
+Hopefully this plugin will fulfil all your needs, if not [get in-touch](http://www.megnicholas.co.uk/contact-me "Get In Touch") and I will customise to your exact requirements.
+
 
 == Installation ==
 There are two ways to install:
@@ -85,7 +86,7 @@ Here is a list of things that you can change
 
 *   **Use client side validation (Ajax)**: When ticked the contact form will be validated on the client giving your user instant feedback if they have filled the form in incorrectly. If you wish the form to be validated only on the server then untick this option.
 
-*   **Use reCAPTCHA**: Tick this option if you wish your form to have a reCAPTCHA box. ReCAPTCHA helps to avoid spam bots using your form by checking that the form filler is actually a real person. To use reCAPTCHA you will need to get a some special keys from google. Once you have your keys enter them into the Public key and Private key boxes
+*   **Use reCAPTCHA**: Tick this option if you wish your form to have a reCAPTCHA box. ReCAPTCHA helps to avoid spam bots using your form by checking that the form filler is actually a real person. To use reCAPTCHA you will need to get a some special keys from google https://www.google.com/recaptcha/admin/create. Once you have your keys enter them into the Public key and Private key boxes
 
 *   **reCAPTCHA Public Key**: Enter the public key that you obtained from here.
 
@@ -93,21 +94,47 @@ Here is a list of things that you can change
 
 *   **reCAPTCHA Theme**: Here you can change the reCAPTCHA box theme so that it fits with the style of your website.
 
+*   **!NEW! Recipient Email**: The email address where you would like all messages to be sent. This will default to the email address you have specified under 'E-Mail Address' in your WordPress General Settings. If you want your mail sent to a different address then enter it here.
+
+*   **!NEW! Email Subject**: This is the email subject that will appear on all messages. If you would like to set it to something different then enter it here.
+
 == Screenshots ==
 1. Contact Form With reCAPTCHA
 2. Contact Form Without reCAPTCHA
 3. Message Sent
 4. Contact Form Options Screen
+5. Place this shortcode on your post or page to deploy
 
 == Demo ==
-This is a demonstration of this plugin working on the default Twenty Twelve theme.
-[Clean and Simple Contact Form Demonstration] (http://demo.megnicholas.co.uk/wordpress-clean-and-simple-contact-form “Plugin Demonstration”)
+This is a demonstration of this plugin working on the default Twenty Twelve theme ->
+[Clean and Simple Contact Form Demonstration](http://demo.megnicholas.co.uk/wordpress-clean-and-simple-contact-form "Plugin Demonstration")
+
+==About Meg Nicholas ==
+I am a freelance WordPress Developer. 
+[Hire me for all your Wordpress needs](http://www.megnicholas.co.uk "Hire Me").
 
 == Frequently Asked Questions ==
 A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap markup.
 
 == Changelog ==
-A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap markup.
+= 4.0.9 =
+* Switched header argument of wp_mail over to a filter to remove any potential conflicts with other emailing plugins or themes
+* The ability to set a different recipient email address. Previously all email was sent to the WordPress administrator email address.
+* Allow the email subject to be customised.
+= 4.0.8 =
+* Fixed a bug: When using reCAPTCHA ajax did not work.
+* Fixed a bug: Ajax validation was not checking email address were equal (server side was doing it instead)
+* Improvement: Ajax now works better.
+* Documentation update: nicer links (worked how to do them in markdown!), changelog and upgrade notice sections now correctly formatted.
+= 4.0.7 =
+* Fixed a bug: Plugin name is actually clean-and-simple-contact-form-by-meg-nicholas now (not contact-form) but this new name needed to be updated in the plugin settings definitions. I also needed to rename contact-form.php to clean-and-simple-contact-form-by-meg-nicholas.php. My thanks to Jakub for finding this bug.
+* If your webpage is ssl then reCAPTCHA will now also use ssl mode.
+
 
 == Upgrade Notice ==
-A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap markup.
+= 4.0.9 =
+More customisation: recipient email address, and email subject.
+= 4.0.8 =
+Ajax now works when your form has reCAPTCHA on it. Ajax validation is now cleaner.
+= 4.0.7 =
+Fixed a bug which occurred when plugin name was changed. reCAPTCHA will now use ssl if your webpage is ssl.
