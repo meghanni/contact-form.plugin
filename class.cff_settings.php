@@ -49,12 +49,14 @@ class cff_settings
             . Thank you!
         </p>
 	    <form method="post" action="options.php">
-	    <?php submit_button(); ?>
 	    <?php
+        submit_button(); 
 
-        // This prints out all hidden setting fields
+        /* This prints out all hidden setting fields*/
         settings_fields('test_option_group');
         do_settings_sections('contact-form-settings');
+        
+        submit_button();
         ?>
 	    </form>
 	</div>
