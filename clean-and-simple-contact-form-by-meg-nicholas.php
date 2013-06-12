@@ -56,6 +56,9 @@ if (!defined('CFF_VERSION_NUM')) define('CFF_VERSION_NUM', '4.1.0');
 
 if (!defined('CFF_OPTIONS_KEY')) define('CFF_OPTIONS_KEY', 'cff_options');
 
+if (!defined('CFF_TEXT_DOMAIN')) define('CFF_TEXT_DOMAIN', 'cleanandsimple');
+
+
 add_option(CFF_VERSION_KEY, CFF_VERSION_NUM);
 
 $cff = new cff();
