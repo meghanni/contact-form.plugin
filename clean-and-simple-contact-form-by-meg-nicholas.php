@@ -52,7 +52,7 @@ if (!defined('CFF_PLUGIN_URL')) define('CFF_PLUGIN_URL', WP_PLUGIN_URL . '/' . C
 
 if (!defined('CFF_VERSION_KEY')) define('CFF_VERSION_KEY', 'cff_version');
 
-if (!defined('CFF_VERSION_NUM')) define('CFF_VERSION_NUM', '4.1.0');
+if (!defined('CFF_VERSION_NUM')) define('CFF_VERSION_NUM', '4.1.1');
 
 if (!defined('CFF_OPTIONS_KEY')) define('CFF_OPTIONS_KEY', 'cff_options');
 
