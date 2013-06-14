@@ -117,6 +117,7 @@ I am a freelance WordPress Developer.
 A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap markup.
 
 == Changelog ==
+* Fixed potential conflicts with themes that use bootstrap
 = 4.1.0 =
 * Fixed a bug in class.cff_settings.php where php opening tag had got missed off. This problem caused the settings screen not to display correctly but only occurred with some versions of php. Please upgrade if you have this problem.
 = 4.0.9 =
