@@ -138,6 +138,8 @@ A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap mark
 
 
 == Upgrade Notice ==
+= 4.1.1 =
+Internationalisation, fixed conflict with some bootstrapped themes.
 = 4.1.0 =
 Please upgrade if your settings screen is not displaying.
 = 4.0.9 =
