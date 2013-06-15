@@ -1,4 +1,4 @@
-=== Clean and Simple Contact Form ===
+=== Contact Form Clean and Simple ===
 Contributors: megnicholas
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AKQM4KSBQ4H66
 License: GPLv2 or later
