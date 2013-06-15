@@ -114,7 +114,36 @@ I am a freelance WordPress Developer.
 [Hire me for all your Wordpress needs](http://www.megnicholas.co.uk "Hire Me").
 
 == Frequently Asked Questions ==
-A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap markup.
+= Why is a different contact form displayed? =
+
+You may have a conflict with another plugin. Either deactivate the other contact form plugin if you don't need it, or use
+this alternative short code on your webpage - `[cscf-contact-form]`.
+This problem often occurs when Jetpack plugin is installed.
+
+= How do I display the contact form on my page/post? =
+To put the contact form on your page, add the text:
+`[contact-form]`
+
+To avoid conflicts with other plugins you can also use:
+`[cscf-contact-form]`
+
+The contact form will appear when you view the page.
+
+= Can I have this plugin in my own language? =
+
+Yes, I am currently building up translation files for this plugin. If your language is not yet available you are very welcome to translate it.
+If you are not sure how to go about doing this [get in touch](http://www.megnicholas.co.uk/contact-me/ "Contact Me").
+
+= How do I change the text box sizes? = 
+
+Currently it is not possible to do this.
+
+= I get a message to say that the message could not be sent =
+
+If you get this message then you have a general problem with email on your server. This plugin uses Wordpress's send mail function.
+So a problem sending mail from this plugin indicates that Wordpress as a whole cannot send email.
+Contact your web host provider for help, or use an SMTP plugin to use a third party email service.
+
 
 == Changelog ==
 = 4.1.1 =
