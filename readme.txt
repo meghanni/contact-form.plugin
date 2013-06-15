@@ -114,9 +114,13 @@ I am a freelance WordPress Developer.
 [Hire me for all your Wordpress needs](http://www.megnicholas.co.uk "Hire Me").
 
 == Frequently Asked Questions ==
-A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap markup.
+= Why is a different contact form displayed? =
+
+You may have a conflict with another plugin. Either deactivate the other contact form plugin if you don't need it, or use
+this alternative short code on your webpage - [cscf-contact-form].
 
 == Changelog ==
+* Added alternative shortcode [cscf-contact-form] for use when conflicts could occur.
 = 4.1.1 =
 * Fixed potential conflicts with themes that use bootstrap
 * Enabled internationalisation, this plugin will now work with multiple languages
