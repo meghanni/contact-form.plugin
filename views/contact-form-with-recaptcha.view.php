@@ -7,7 +7,7 @@
 
 <p><?php echo $message; ?></p>
 
-<form id="frmContact" name="frmContact" method="post">
+<form id="frmCSCF" name="frmCSCF" method="post">
 
 <?php wp_nonce_field('cscf_contact','cscf_nonce'); ?>
     
