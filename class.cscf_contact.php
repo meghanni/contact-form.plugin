@@ -4,7 +4,7 @@
  * class for holding and validating data captured from the contact form
 */
 
-class cff_Contact
+class cscf_Contact
 {
     var $Name;
     var $Email;
@@ -19,10 +19,10 @@ class cff_Contact
     {
         $this->Errors = array();
         
-        if (cff_PluginSettings::UseRecaptcha()) 
+        if (cscf_PluginSettings::UseRecaptcha()) 
         {
-            $this->RecaptchaPublicKey = cff_PluginSettings::PublicKey();
-            $this->RecaptchaPrivateKey = cff_PluginSettings::PrivateKey();
+            $this->RecaptchaPublicKey = cscf_PluginSettings::PublicKey();
+            $this->RecaptchaPrivateKey = cscf_PluginSettings::PrivateKey();
         }
         
         if ($_SERVER['REQUEST_METHOD'] == 'POST') 
@@ -47,7 +47,7 @@ class cff_Contact
 
         //check nonce
         
-        if (!wp_verify_nonce($_POST['cff_nonce'], 'cff_contact')) 
+        if (!wp_verify_nonce($_POST['cscf_nonce'], 'cscf_contact')) 
         return false;
 
         // email and confirm email are the same

@@ -1,6 +1,6 @@
 <script type="text/javascript">
  var RecaptchaOptions = {
-    theme : '<?php echo cff_PluginSettings::Theme(); ?>'
+    theme : '<?php echo cscf_PluginSettings::Theme(); ?>'
  };
  </script>
 
@@ -9,7 +9,7 @@
 
 <form id="frmContact" name="frmContact" method="post">
 
-<?php wp_nonce_field('cff_contact','cff_nonce'); ?>
+<?php wp_nonce_field('cscf_contact','cscf_nonce'); ?>
     
 <!-- Clean and Simple Contact Form by megnicholas. Version <?php echo $version; ?> -->
 
