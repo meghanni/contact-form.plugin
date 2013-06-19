@@ -25,16 +25,14 @@ class cscf_Contact
             $this->RecaptchaPrivateKey = cscf_PluginSettings::PrivateKey();
         }
         
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+        if ( $_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cscf']) ) 
         {
-            $this->Name = filter_var($_POST['cf-Name'], FILTER_SANITIZE_STRING);
-            unset($_POST['cf-Name']);
-            $this->Email = filter_var($_POST['cf-Email'], FILTER_SANITIZE_EMAIL);
-            unset($_POST['cf-Email']);
-            $this->ConfirmEmail = filter_var($_POST['cfconfirm-email'], FILTER_SANITIZE_EMAIL);
-            unset($_POST['cfconfirm-email']);
-            $this->Message = filter_var($_POST['cf-Message'], FILTER_SANITIZE_STRING);
-            unset($_POST['cf-Message']);
+            $cscf = $_POST['cscf'];
+            $this->Name = filter_var($cscf['name'], FILTER_SANITIZE_STRING);
+            $this->Email = filter_var($cscf['email'], FILTER_SANITIZE_EMAIL);
+            $this->ConfirmEmail = filter_var($cscf['confirm-email'], FILTER_SANITIZE_EMAIL);
+            $this->Message = filter_var($cscf['message'], FILTER_SANITIZE_STRING);
+            unset($_POST['cscf']);
         }
     }
     
@@ -52,27 +50,27 @@ class cscf_Contact
 
         // email and confirm email are the same
         
-        if ($this->Email != $this->ConfirmEmail) $this->Errors['Confirm-Email'] = __('Sorry the email addresses do not match.','cleanandsimple');
+        if ($this->Email != $this->ConfirmEmail) $this->Errors['confirm-email'] = __('Sorry the email addresses do not match.','cleanandsimple');
 
         //email
         
-        if (strlen($this->Email) == 0) $this->Errors['Email'] = __('Please give your email address.','cleanandsimple');
+        if (strlen($this->Email) == 0) $this->Errors['email'] = __('Please give your email address.','cleanandsimple');
 
         //confirm email
         
-        if (strlen($this->ConfirmEmail) == 0) $this->Errors['Confirm-Email'] = __('Please confirm your email address.','cleanandsimple');
+        if (strlen($this->ConfirmEmail) == 0) $this->Errors['confirm-email'] = __('Please confirm your email address.','cleanandsimple');
 
         //name
         
-        if (strlen($this->Name) == 0) $this->Errors['Name'] = __('Please give your name.','cleanandsimple');
+        if (strlen($this->Name) == 0) $this->Errors['name'] = __('Please give your name.','cleanandsimple');
 
         //message
         
-        if (strlen($this->Message) == 0) $this->Errors['Message'] = __('Please enter a message.','cleanandsimple');
+        if (strlen($this->Message) == 0) $this->Errors['message'] = __('Please enter a message.','cleanandsimple');
 
         //email invalid address
         
-        if (strlen($this->Email) > 0 && !filter_var($this->Email, FILTER_VALIDATE_EMAIL)) $this->Errors['Email'] = __('Please enter a valid email address.','cleanandsimple');
+        if (strlen($this->Email) > 0 && !filter_var($this->Email, FILTER_VALIDATE_EMAIL)) $this->Errors['email'] = __('Please enter a valid email address.','cleanandsimple');
 
         //check recaptcha but only if we have keys
         
