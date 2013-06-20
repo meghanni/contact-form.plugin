@@ -156,6 +156,7 @@ Contact your web host provider for help, or use an SMTP plugin to use a third pa
 * Updated the documentation.
 * Recaptcha form now responds to language changes
 * Fixed the recaptcha form which google screwed up by putting a privacy link in. Link has been hidden.
+* Updated pot file to reflect new name space
 = 4.1.1 =
 * Fixed potential conflicts with themes that use bootstrap
 * Enabled internationalisation, this plugin will now work with multiple languages
