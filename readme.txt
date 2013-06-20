@@ -117,6 +117,7 @@ I am a freelance WordPress Developer.
 A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap markup.
 
 == Changelog ==
+* Updated pot file to reflect new name space
 = 4.1.1 =
 * Fixed potential conflicts with themes that use bootstrap
 * Enabled internationalisation, this plugin will now work with multiple languages
