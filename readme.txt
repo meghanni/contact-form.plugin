@@ -146,6 +146,7 @@ Contact your web host provider for help, or use an SMTP plugin to use a third pa
 
 
 == Changelog ==
+* Added some FAQs
 = 4.1.1 =
 * Fixed potential conflicts with themes that use bootstrap
 * Enabled internationalisation, this plugin will now work with multiple languages
