@@ -13,7 +13,6 @@
     
 <!-- Clean and Simple Contact Form by megnicholas. Version <?php echo $version; ?> -->
 
-<!-- Clean and Simple Contact Form. Version <?php echo $version; ?> -->
   <div class="control-group">
       <div class="controls">
       <p class="text-error"><?php if (isset($contact->Errors['recaptcha'])) echo $contact->Errors['recaptcha']; ?></p>
