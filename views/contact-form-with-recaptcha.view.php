@@ -3,7 +3,12 @@
     theme : '<?php echo cff_PluginSettings::Theme(); ?>'
  };
  </script>
-
+ 
+<style>
+span#recaptcha_privacy {
+    display:none;
+}
+</style>
 
 <p><?php echo $message; ?></p>
 
