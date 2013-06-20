@@ -120,8 +120,7 @@ I am a freelance WordPress Developer.
 == Frequently Asked Questions ==
 = Why is a different contact form displayed? =
 
-You may have a conflict with another plugin. Either deactivate the other contact form plugin if you don't need it, or use
-<<<<<<< HEAD
+You may have a conflict with another plugin. Either deactivate the other contact form plugin, if you don't need it, or use
 this alternative short code on your webpage - `[cscf-contact-form]`.
 This problem often occurs when Jetpack plugin is installed.
 
