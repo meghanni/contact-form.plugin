@@ -21,7 +21,7 @@ A clean and simple contact form with Google reCAPTCHA and Twitter Bootstrap mark
 Uses **Twitter Bootstrap** classes.
 
 This is a straightforward contact form for your WordPress site. There is very minimal set-up 
-required. 
+required. Simply install, activate, and then place the short code [contact-form] on your web page.
 
 A standard set of input boxes are provided, these include Email Address, Name, Message and a nice big ‘Send Message’ button. 
 
@@ -58,7 +58,11 @@ There are two ways to install:
 
 1. Click the ‘Install Now’ link from the plugin library listing to automatically download and install.
 
-2. Download the plugin as a zip file. To install the zip file simply double click to extract it and place the ‘contact-form’ folder in your wordpress plugins folder, i.e. <wordpress>/wp-content/plugins where <wordpress> is the directory that you installed WordPress in.
+2. Download the plugin as a zip file. To install the zip file simply double click to extract it and place the whole folder in your wordpress plugins folder, e.g. [wordpress]/wp-content/plugins where [wordpress] is the directory that you installed WordPress in.
+
+Then visit the plugin page on your wordpress site and click ‘Activate’ against the ‘Clean and Simple Contact Form’ plugin listing.
+
+[More information on how to use the plugin.](http://www.megnicholas.co.uk/wordpress-plugins/clean-and-simple-contact-form/ "More Information")
 
 == How to Use ==
 Unless you want to change messages or add reCAPTCHA to your contact form then this plugin will work without any additional setup.
@@ -149,6 +153,7 @@ Contact your web host provider for help, or use an SMTP plugin to use a third pa
 == Changelog ==
 * Added some FAQs
 * Added alternative shortcode [cscf-contact-form] for use when conflicts could occur.
+* Updated the documentation.
 = 4.1.1 =
 * Fixed potential conflicts with themes that use bootstrap
 * Enabled internationalisation, this plugin will now work with multiple languages
