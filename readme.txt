@@ -159,7 +159,7 @@ Contact your web host provider for help, or use an SMTP plugin to use a third pa
 * Updated pot file to reflect new name space
 * Changed name space from cff to cscf
 * Settings screen: recaptcha theme and key inputs are immediately enabled/disabled as the 'Use reCAPTCHA' box is clicked. 
-* removed style="" from views
+* corrected some html seen as invalid by http://validator.w3.org/
 = 4.1.1 =
 * Fixed potential conflicts with themes that use bootstrap
 * Enabled internationalisation, this plugin will now work with multiple languages
