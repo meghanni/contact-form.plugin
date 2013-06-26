@@ -150,6 +150,7 @@ Contact your web host provider for help, or use an SMTP plugin to use a third pa
 
 
 == Changelog ==
+= 4.1.2 =
 * Added some FAQs
 * Added alternative shortcode [cscf-contact-form] for use when conflicts could occur.
 * Updated the documentation.
