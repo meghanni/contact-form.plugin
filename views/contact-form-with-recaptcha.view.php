@@ -4,12 +4,6 @@
  };
  </script>
  
-<style>
-span#recaptcha_privacy {
-    display:none;
-}
-</style>
-
 <p><?php echo $message; ?></p>
 
 <form id="frmCSCF" name="frmCSCF" method="post">
