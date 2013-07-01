@@ -48,7 +48,12 @@ class cscf_settings
                         </a>
             . <?php _e('Thank you!','cleanandsimple'); ?>
         </p>
-	    <form method="post" action="options.php">
+        
+        <?php if ( cscf_PluginSettings::IsJetPackContactFormEnabled() ) { ?>
+           <p class="highlight"> <?php _e('NOTICE: You have JetPack\'s Contact Form enabled please deactivate it or use the shortcode [cscf-contact-form] instead.','cleanandsimple'); ?> </p>
+        <?php } ?>
+        
+        <form method="post" action="options.php">
 	    <?php
         submit_button(); 
 
