@@ -164,6 +164,7 @@ Contact your web host provider for help, or use an SMTP plugin to use a third pa
 * Settings screen: recaptcha theme and key inputs are immediately enabled/disabled as the 'Use reCAPTCHA' box is clicked. 
 * Corrected some html seen as invalid by http://validator.w3.org/
 * removed '<?=' and replaced with '<?php echo' in cscf_settings, thanks go to andrewbacon
+* Added notice to setting screen when JetPack's contact form is active
 = 4.1.1 =
 * Fixed potential conflicts with themes that use bootstrap
 * Enabled internationalisation, this plugin will now work with multiple languages
