@@ -52,7 +52,7 @@ class cscf_settings
         <?php if ( cscf_PluginSettings::IsJetPackContactFormEnabled() ) { ?>
            <p class="highlight"> 
                <?php _e('NOTICE: You have JetPack\'s Contact Form enabled please deactivate it or use the shortcode [cscf-contact-form] instead.','cleanandsimple'); ?> 
-               &nbsp; <a target="_blank" href="http://www.megnicholas.co.uk/"><?php _e('Read More');?></a>
+               &nbsp; <a target="_blank" href="http://www.megnicholas.co.uk/articles/clean-and-simple-contact-form-and-jetpack/"><?php _e('Read More');?></a>
            </p>
         <?php } ?>
         
