@@ -185,6 +185,8 @@ Contact your web host provider for help, or use an SMTP plugin to use a third pa
 
 
 == Upgrade Notice ==
+= 4.1.2 =
+Alternative shortcode, recaptcha internationalisation, Jetpack conflict warning notice
 = 4.1.1 =
 Internationalisation, fixed conflict with some bootstrapped themes.
 = 4.1.0 =
